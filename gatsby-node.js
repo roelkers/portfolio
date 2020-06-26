@@ -5,3 +5,13 @@
  */
 
 // You can delete this file if you're not using it
+exports.createPages = ({ actions: { createPage } }) => {
+  createPage({
+    path: "/no-data",
+    component: require.resolve("./src/templates/no-data.tsx"),
+    context: {
+      title: "We Don’t Need No Stinkin’ GraphQL!",
+      content: "<p>This is page content.</p><p>No GraphQL required!</p>",
+    },
+  })
+}
