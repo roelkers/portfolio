@@ -1,0 +1,13 @@
+@import './base/reset';
+@import './base/typography';
+@import './abstracts/mixins';
+@import './abstracts/variables';
+@import './pages/home';
+@import './components/header';
+@import './components/projects';
+
+@import './layout/footer';
+@import './components/personal';
+
+
+@import './vendors/devicon';

@@ -1,0 +1,38 @@
+.projects {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  &__card {
+    display: block;
+    width: 32rem;
+    height: 48rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0,0,0, 0.2);
+    margin: 2rem;
+    transition: .2s all;
+
+    &:hover {
+      transform: scale(1.05);
+    } 
+  }
+
+  &__img {
+    background-color: orangered;
+    width: 28rem;
+    height: 28rem;
+  }
+
+  &__title {
+
+  }
+
+  &__github {
+
+  }
+
+  &__live {
+
+  }
+
+
+}

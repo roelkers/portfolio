@@ -1,0 +1,27 @@
+.personal {
+
+  &__list {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    flex-flow: row wrap;
+  } 
+
+  &__item {
+    font-size: 3rem;
+    margin-right: 1em;
+    margin-bottom: .5rem;
+  } 
+
+  &__devicon {
+    margin-right: .5rem;
+    color: $secondary-color;
+    display: inline-block;
+    transition: .2s all;
+  }
+
+  &__item:hover &__devicon {
+    transform: scale(1.2);
+  }
+
+}
