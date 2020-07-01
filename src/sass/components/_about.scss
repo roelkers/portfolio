@@ -1,0 +1,22 @@
+.about {
+
+  max-width: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row nowrap;
+
+  &__photo {
+    width: 50%;
+    padding: 3rem;
+  }
+
+  &__img {
+    border-radius: 100px;
+  }
+
+  &__description {
+    width: 50%;
+  }
+
+}

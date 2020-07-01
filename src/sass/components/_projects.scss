@@ -2,6 +2,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+
   &__card {
     display: block;
     width: 32rem;
@@ -10,10 +11,11 @@
     box-shadow: 0 1rem 2rem rgba(0,0,0, 0.2);
     margin: 2rem;
     transition: .2s all;
+    background-color: $grey-color;
 
     &:hover {
       transform: scale(1.05);
-    } 
+    }
   }
 
   &__img {
@@ -26,13 +28,45 @@
 
   }
 
+  &__live {
+    animation: 1s ease-in glow;
+    animation-iteration-count: infinite;
+
+    &:link, &:visited {
+      text-decoration: none;
+      color: $dark-secondary-color;
+    }
+
+    &:active, &:hover {
+      transform: scale(1.5);  
+    }
+  }
+
   &__github {
 
+    &:link, &:visited {
+      text-decoration: none;
+      color: $dark-secondary-color;
+    }
+
+    &:hover, &:active {
+      transform: scale(1.15);  
+    }
   }
 
-  &__live {
-
+  @keyframes glow {
+    0% {
+      transform:scale(1.0);
+      opacity: 0.5;
+    } 
+    50% {
+      transform:scale(1.025);
+      opacity: 1;
+    } 
+    100% {
+      transform:scale(1.0);
+      opacity: 0.5;
+    } 
   }
-
 
 }

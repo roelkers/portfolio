@@ -26,7 +26,7 @@ const MultiBackground = ({ className } : { className : string}) => {
   // positions! The lowermost image comes last!
   const backgroundFluidImageStack = [
     header.childImageSharp.fluid,
-    `linear-gradient(rgba(220, 15, 15, 0.73), rgba(4, 243, 67, 0.73))`,
+    `linear-gradient(rgba(255, 169, 9, 0.73), rgba(9, 169, 255, 0.73))`,
   ].reverse()
   
   return (

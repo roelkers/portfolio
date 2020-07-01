@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import HeaderImage from "../components/headerImage"
 import SEO from "../components/seo"
+import ProfileImage from '../components/profileImage'
 
 const IndexPage = () => (
   <Layout>
@@ -13,7 +14,7 @@ const IndexPage = () => (
     <main className='main'>
       <section className='section-personal'>
         <div className="personal">
-          <h2>My Skills:</h2>
+          <h2>My skills:</h2>
           <ul className='personal__list'>
             <li className="personal__item"><span className='devicon'>🏯</span> Software Architecture</li>
             <li className="personal__item"><i className='devicon-react-original colored personal__devicon'/>React.js</li>
@@ -32,30 +33,41 @@ const IndexPage = () => (
           <div className='projects__card'>
             <img className='projects__img' />
             <h3 className="projects__title">CQRS shopping list&nbsp;&nbsp;
-            <a href='#'><i className='devicon-github-original colored project__github' /></a>&nbsp;&nbsp;
+            <a className='projects__github' href='#'><i className='devicon-github-original colored' /></a>&nbsp;&nbsp;
             <a href='#' className='projects__live'>live!</a></h3>
             <p className="projects__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime quasi harum soluta velit, laboriosam quod fugit.</p>
           </div>
           <div className='projects__card'>
             <img className='projects__img' />
             <h3 className="projects__title">CQRS shopping list&nbsp;&nbsp;
-            <a href='#'><i className='devicon-github-original colored project__github' /></a>&nbsp;&nbsp;
+            <a className='projects__github' href='#'><i className='devicon-github-original colored' /></a>&nbsp;&nbsp;
             <a href='#' className='projects__live'>live!</a></h3>
             <p className="projects__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime quasi harum soluta velit, laboriosam quod fugit.</p>
           </div>
           <div className='projects__card'>
             <img className='projects__img' />
             <h3 className="projects__title">CQRS shopping list&nbsp;&nbsp;
-            <a href='#'><i className='devicon-github-original colored project__github' /></a>&nbsp;&nbsp;
+            <a className='projects__github' href='#'><i className='devicon-github-original colored' /></a>&nbsp;&nbsp;
             <a href='#' className='projects__live'>live!</a></h3>
             <p className="projects__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime quasi harum soluta velit, laboriosam quod fugit.</p>
           </div>
           <div className='projects__card'>
             <img className='projects__img' />
             <h3 className="projects__title">CQRS shopping list&nbsp;&nbsp;
-            <a href='#'><i className='devicon-github-original colored project__github' /></a>&nbsp;&nbsp;
+            <a className='projects__github' href='#'><i className='devicon-github-original colored' /></a>&nbsp;&nbsp;
             <a href='#' className='projects__live'>live!</a></h3>
             <p className="projects__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime quasi harum soluta velit, laboriosam quod fugit.</p>
+          </div>
+        </div>
+      </section>
+      <section className="section-about">
+        <div className='about'>
+          <div className='about__photo'>
+            <ProfileImage className='about__img' />
+          </div> 
+          <div className="about__description">
+            <h3>About Me</h3>
+            <p className='about__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sed iste hic similique. Obcaecati ipsum, consequuntur cum, consequatur at perspiciatis dolorum, error molestias ratione sequi nostrum sunt odio ea recusandae?</p>
           </div>
         </div>
       </section>
