@@ -6,7 +6,6 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
@@ -14,24 +13,16 @@ import "../sass/index.scss"
 import 'typeface-source-sans-pro'
 
 const Layout = ({ children } : any) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
 
   return (
     <>
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: 1440,
+          maxWidth: 1880,
         }}
       >
+        <Header />
         {children}
         <footer>
           © {new Date().getFullYear()}, Built with
@@ -43,8 +34,5 @@ const Layout = ({ children } : any) => {
   )
 }
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
 
 export default Layout

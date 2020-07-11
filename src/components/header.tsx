@@ -1,42 +1,43 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import { useStaticQuery, graphql, Link } from 'gatsby'
+import BackgroundImage from 'gatsby-background-image'
 
-const Header = ({ siteTitle } : { siteTitle : any}) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 1440,
-        padding: `1.45rem 1.0875rem`,
-      }}
+const Header = () => {
+  const {
+    header,
+  } = useStaticQuery(
+    graphql`
+      query {
+        header: file(relativePath: { eq: "header-large.jpg" }) {
+          childImageSharp {
+            fluid(quality: 100, maxWidth: 1880) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `
+  )
+
+  // Watch out for CSS's stacking order, especially when styling the individual
+  // positions! The lowermost image comes last!
+  const backgroundFluidImageStack = [
+    header.childImageSharp.fluid,
+    `linear-gradient(rgba(60, 91, 214, 0.73), rgba(115, 140, 240, 0.73))`,
+  ].reverse()
+
+  return (
+    <Link
+      to="/"
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
+      <BackgroundImage
+        Tag={`section`}
+        id={`test`}
+        className='header-layout__img'
+        fluid={backgroundFluidImageStack}
+      />
+    </Link>
+  )
 }
 
 export default Header

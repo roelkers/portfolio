@@ -12,7 +12,7 @@ const MultiBackground = ({ className } : { className : string}) => {
       query {
         header: file(relativePath: { eq: "header-large.jpg" }) {
           childImageSharp {
-            fluid(quality: 100, maxWidth: 1440) {
+            fluid(quality: 100, maxWidth: 1880) {
               ...GatsbyImageSharpFluid_withWebp
             }
           }
@@ -20,13 +20,12 @@ const MultiBackground = ({ className } : { className : string}) => {
       }
     `
   )
-    
 
   // Watch out for CSS's stacking order, especially when styling the individual
   // positions! The lowermost image comes last!
   const backgroundFluidImageStack = [
     header.childImageSharp.fluid,
-    `linear-gradient(rgba(255, 169, 9, 0.73), rgba(9, 169, 255, 0.73))`,
+    `linear-gradient(rgba(60, 91, 214, 0.73), rgba(115, 140, 240, 0.73))`,
   ].reverse()
   
   return (
@@ -37,13 +36,13 @@ const MultiBackground = ({ className } : { className : string}) => {
       fluid={backgroundFluidImageStack}
     >
       <h1 className="header__heading header__heading--slide-1">
-        Hi. Welcome to my page.
+        Hey, great to have you here.
         </h1>
       <h1 className="header__heading header__heading--slide-2">
         My Name is Rufus Oelkers.
         </h1>
       <h1 className="header__heading header__heading--slide-3">
-        I am a Full-Stack Software Developer
+        I am a Software engineer. 
       </h1>
     </BackgroundImage>
   )
