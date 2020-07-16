@@ -34,40 +34,14 @@
 
   &__more {
     position: relative;
-    display: block;
-    padding: .25rem .5rem;
+    display: inline-block;
+    width: 8em;
 
-    &:hover::before, &:active::before {
-      transform: scaleY(1);
-      width: 9rem;
-    }
-
-    &::before {
-      content: "";
-      position: absolute;
-      display: block;
-      top: 0;
-      left: 0;
-      transform: scaleY(0);
-      width: 3px;
-      height: 100%;
-      background-color: $dark-primary-color;
-      transition: transform .2s, width .4s cubic-bezier(1, 0, 0, 1) .2s;
-    }
+    @include background-link-animation; 
   }
 
   &__link {
-    &:link,&:visited {
-      display: block;
-      position: relative;
-      color: $dark-primary-color;
-      text-decoration: none;
-      z-index: 10;
-      transition: .6s cubic-bezier(1, 0, 0, 1);
-    }
-    &:hover , &:active {
-      color: #fff; 
-    }
+    @include background-link-animation__link; 
   }
 
   &__img {

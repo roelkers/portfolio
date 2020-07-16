@@ -36,6 +36,9 @@ const Header = () => {
         className='header-layout__img'
         fluid={backgroundFluidImageStack}
       />
+    <section className="header-layout__title">
+      <h2>Blog</h2>
+    </section>
     </Link>
   )
 }

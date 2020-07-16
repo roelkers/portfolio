@@ -1,6 +1,8 @@
 .header {
   position: relative;
   background-color: linear-gradient($primary-color,$secondary-color);
+  max-width: 188rem;
+  margin: 0 auto;
 
   &__heading {
     position: absolute;
@@ -99,16 +101,3 @@
   }
 }
 
-
-.header-layout__img {
-    min-height: 25vh;
-    /* You should set a background-size as the default value is "cover"! */
-    background-size: cover; 
-    /* So we won't have the default "lightgray" background-color. */
-    background-color: transparent;
-    /* Now again, remember the stacking order of CSS: lowermost comes last! */
-    background-repeat: no-repeat, no-repeat, repeat;
-    background-position: center 155%, center, center;
-    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 0% 85%);
-    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
-}

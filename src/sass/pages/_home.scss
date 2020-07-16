@@ -1,19 +1,15 @@
-.section-heading {
-  padding: 0 4rem;
-  margin: 0;
-  margin-block-start: 0rem;
-  margin-block-end: 0rem;
-}
-
 .section-personal {
   padding: 25rem 4rem 4rem 4rem;
-  margin-top: -25rem;
   background-color: $grey-color;
+  max-width: 188rem;
+  margin: -25rem auto 0 auto;
 }
 
 .section-projects {
   background-color: $light-primary-color;
   padding: 4rem 0;
+  max-width: 144rem;
+  margin: 0 auto;
 }
 
 .section-about {
@@ -21,9 +17,13 @@
   justify-content: center;
   align-items: center;
   padding: 4rem 0;
+  max-width: 144rem;
+  margin: 0 auto;
 }
 
 .section-blogs {
   padding: 4rem 4rem;
   background-color: $dark-secondary-color;
+  max-width: 144rem;
+  margin: 0 auto;
 }

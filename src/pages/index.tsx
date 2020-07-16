@@ -1,13 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
-import Layout from "../components/layout"
 import HeaderImage from "../components/headerImage"
+import Footer from '../components/footer'
 import SEO from "../components/seo"
 import ProfileImage from '../components/profileImage'
 import Blogs from "../components/blogs"
 
 const IndexPage = () => (
-  <Layout>
+  <div>
     <SEO title="Home" />
     <header className="header">
       <HeaderImage className='header__image' />
@@ -40,7 +40,7 @@ const IndexPage = () => (
         </div>
       </section>
       <section className='section-projects'>
-        <h2 className='section-heading'>My projects:</h2>
+        <h2 className='projects__title'>My projects:</h2>
         <div className='projects'>
           <div className='projects__card'>
             <img className='projects__img' />
@@ -74,7 +74,8 @@ const IndexPage = () => (
       </section>
       <section className="section-blogs"><Blogs /></section>
     </main>
-  </Layout>
+    <Footer />
+    </div>
 )
 
 export default IndexPage

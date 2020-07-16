@@ -3,6 +3,10 @@
   flex-flow: row wrap;
   justify-content: center;
 
+  &__title {
+    margin-left: 4rem
+  }
+
   &__card {
     display: block;
     width: 32rem;

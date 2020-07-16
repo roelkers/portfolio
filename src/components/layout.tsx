@@ -9,27 +9,17 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
+import Footer from './footer'
 import "../sass/index.scss"
 import 'typeface-source-sans-pro'
 
-const Layout = ({ children } : any) => {
+const Layout = ({ children }: any) => {
 
   return (
     <>
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 1880,
-        }}
-      >
-        <Header />
-        {children}
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <Header />
+      {children}
+      <Footer />
     </>
   )
 }

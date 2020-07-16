@@ -1,0 +1,26 @@
+.header-layout__title{ 
+  
+    padding: 25rem 4rem 2rem 4rem;
+    background-color: $grey-color;
+    max-width: 188rem;
+    margin: -25rem auto 0 auto;
+
+    h2 {
+      &:link,&:visited {
+        text-decoration: none;
+      }
+    }
+}
+
+.header-layout__img {
+    min-height: 25vh;
+    /* You should set a background-size as the default value is "cover"! */
+    background-size: cover; 
+    /* So we won't have the default "lightgray" background-color. */
+    background-color: transparent;
+    /* Now again, remember the stacking order of CSS: lowermost comes last! */
+    background-repeat: no-repeat, no-repeat, repeat;
+    background-position: center 155%, center, center;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 50% 100%, 0% 85%);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.2);
+}

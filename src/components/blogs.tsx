@@ -18,6 +18,7 @@ const Blogs = () => {
           }
           text
           content
+          category
         }
       }
     }
@@ -30,12 +31,12 @@ const Blogs = () => {
       {blogEntries.map((entry : any) => {
       const { slug, image, content, text } = entry.node
       return (<article className='blogs__article'>
-        <Image fixed={image.childImageSharp.fixed} className='blogs__img'/>
+        <Link to={`/${slug}`}><Image fixed={image.childImageSharp.fixed} className='blogs__img'/></Link>
         <div className='blogs__description'>
           <h3 className="blogs__title">{text}</h3> 
           <p className='blogs__preview'>{content}</p>
           <span className='blogs__more'>
-              <Link className='blogs__link' to='#'>Read more...</Link>
+              <Link className='blogs__link' to={`/${slug}`}>Read more...</Link>
            </span>
         </div>
       </article>)})}

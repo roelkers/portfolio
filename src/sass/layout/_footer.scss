@@ -1,0 +1,16 @@
+.footer {
+  padding: 2rem;
+
+  &__date {
+    max-width: fit-content;
+    margin: 0 auto;
+  }
+
+  &__link-gatsby {
+    &:link, &:visited {
+      text-decoration: none;
+      color: $dark-primary-color;
+
+    }
+  }
+}
