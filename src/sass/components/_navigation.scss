@@ -1,0 +1,53 @@
+.navigation {
+  border-right: 3px solid $dark-grey-color;
+  font-size: 2rem;
+  padding: 2rem 0;
+
+  &__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+    :not(:last-child) {
+      margin-bottom: 2.5rem;
+    }
+
+  }
+
+  &__item {
+    position: relative;
+  }
+
+  &__link {
+    padding: .5rem 2rem;
+    border: 3px solid $dark-grey-color;
+    border-radius: 1rem;
+    margin-right: 1rem;
+    display: inline-block;
+    text-align: center;
+    width: 15rem; 
+    background-color: #fff;
+    right: 1rem;
+
+    &:link,&:visited {
+      text-decoration: none;
+      color: #000;
+
+      &:hover {
+        background-color : $grey-color;
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      display: inline-block;
+      border-top: 3px solid $dark-grey-color;
+      width: 1rem;
+      height: .5rem;
+    }
+  }
+}

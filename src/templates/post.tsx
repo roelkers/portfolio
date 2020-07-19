@@ -5,12 +5,16 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import ReactMarkdown from 'react-markdown'
 import Image from 'gatsby-image'
+import { Navigation } from "../components/nav"
 
-const SecondPage = ({ data }: any) => {
-  console.log(data)
+const Post = ({ data }: any) => {
   return (
     <Layout>
       <SEO title="Page two" />
+      <section className='section-navigation'>
+        <h2>Content</h2>
+        <Navigation />
+      </section>
       <main className='post'>
         <section className="post__section-title">
           <span className='post__category'>{data.strapiBlog.category}</span>
@@ -27,7 +31,7 @@ const SecondPage = ({ data }: any) => {
   )
 }
 
-export default SecondPage
+export default Post
 
 export const query = graphql`
   query ArticleTemplate($slug: String!) {

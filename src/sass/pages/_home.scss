@@ -8,7 +8,7 @@
 .section-projects {
   background-color: $light-primary-color;
   padding: 4rem 0;
-  max-width: 144rem;
+  max-width: 128rem;
   margin: 0 auto;
 }
 
@@ -24,6 +24,13 @@
 .section-blogs {
   padding: 4rem 4rem;
   background-color: $dark-secondary-color;
-  max-width: 144rem;
+  max-width: 128rem;
   margin: 0 auto;
+}
+
+.section-navigation {
+  text-align: left;
+  position: absolute;
+  right: 2.5%;
+  height: 100%;
 }

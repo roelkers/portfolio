@@ -5,15 +5,18 @@ import Footer from '../components/footer'
 import SEO from "../components/seo"
 import ProfileImage from '../components/profileImage'
 import Blogs from "../components/blogs"
+import { Projects } from "../components/projects"
+import { Navigation } from "../components/nav"
 
 const IndexPage = () => (
   <div>
+    <div className='nav-menu'><Link to='/navigation' className='nav-menu__link'><span className='nav-menu__icon'></span></Link></div>
     <SEO title="Home" />
     <header className="header">
       <HeaderImage className='header__image' />
     </header>
     <main className='main'>
-      <section className='section-personal'>
+      <section id='personal' className='section-personal'>
         <div className="personal">
           <h2>Skills:</h2>
           <ul className='personal__list'>
@@ -28,7 +31,11 @@ const IndexPage = () => (
           </ul>
         </div>
       </section>
-      <section className="section-about">
+      <section className='section-navigation'>
+        <h2>Content</h2>
+        <Navigation />
+      </section>
+      <section id='about' className="section-about">
         <div className='about'>
           <div className='about__photo'>
             <ProfileImage className='about__img' />
@@ -39,43 +46,13 @@ const IndexPage = () => (
           </div>
         </div>
       </section>
-      <section className='section-projects'>
-        <h2 className='projects__title'>My projects:</h2>
-        <div className='projects'>
-          <div className='projects__card'>
-            <img className='projects__img' />
-            <h3 className="projects__title">CQRS shopping list&nbsp;&nbsp;
-            <a className='projects__github' href='#'><i className='devicon-github-original colored' /></a>&nbsp;&nbsp;
-            <a href='#' className='projects__live'>live!</a></h3>
-            <p className="projects__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime quasi harum soluta velit, laboriosam quod fugit.</p>
-          </div>
-          <div className='projects__card'>
-            <img className='projects__img' />
-            <h3 className="projects__title">CQRS shopping list&nbsp;&nbsp;
-            <a className='projects__github' href='#'><i className='devicon-github-original colored' /></a>&nbsp;&nbsp;
-            <a href='#' className='projects__live'>live!</a></h3>
-            <p className="projects__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime quasi harum soluta velit, laboriosam quod fugit.</p>
-          </div>
-          <div className='projects__card'>
-            <img className='projects__img' />
-            <h3 className="projects__title">CQRS shopping list&nbsp;&nbsp;
-            <a className='projects__github' href='#'><i className='devicon-github-original colored' /></a>&nbsp;&nbsp;
-            <a href='#' className='projects__live'>live!</a></h3>
-            <p className="projects__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime quasi harum soluta velit, laboriosam quod fugit.</p>
-          </div>
-          <div className='projects__card'>
-            <img className='projects__img' />
-            <h3 className="projects__title">CQRS shopping list&nbsp;&nbsp;
-            <a className='projects__github' href='#'><i className='devicon-github-original colored' /></a>&nbsp;&nbsp;
-            <a href='#' className='projects__live'>live!</a></h3>
-            <p className="projects__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime quasi harum soluta velit, laboriosam quod fugit.</p>
-          </div>
-        </div>
+      <section id='projects' className='section-projects'>
+        <Projects />
       </section>
-      <section className="section-blogs"><Blogs /></section>
+      <section id='blog' className="section-blogs"><Blogs /></section>
     </main>
     <Footer />
-    </div>
+  </div>
 )
 
 export default IndexPage

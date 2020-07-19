@@ -1,0 +1,45 @@
+.nav-menu {
+  position: fixed;
+  top: 5rem;
+  right: 5rem;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5rem;
+  display: block;
+  border: 2px solid $dark-grey-color;
+  background-color: #fff;
+  z-index: 5;
+
+  &__link {
+    display: block;
+    height: 100%;
+  }
+
+  &__icon {
+      display: block;
+      @include absCenter;
+      box-sizing: content-box;
+      border-top: 2px solid $dark-grey-color;
+      width: 3rem;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      border-top: 2px solid $dark-grey-color;
+      bottom: .7rem;
+      width: 3rem;
+
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      border-top: 2px solid $dark-grey-color;
+      top: .5rem;
+      width: 3rem;
+
+    }
+  }
+}
