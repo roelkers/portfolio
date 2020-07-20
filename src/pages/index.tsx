@@ -42,7 +42,7 @@ const IndexPage = () => (
           </div>
           <div className="about__description">
             <h3>About Me</h3>
-            <p className='about__text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus sed iste hic similique. Obcaecati ipsum, consequuntur cum, consequatur at perspiciatis dolorum, error molestias ratione sequi nostrum sunt odio ea recusandae?</p>
+            <p className='about__text'>I'm a Fullstack Web Developer from Berlin, Germany. I have a passion for Javascript and React. My current job is shaping the IoT world <a className='about__link' href='http://conradconnect.de'>@ConradConnect</a></p>
           </div>
         </div>
       </section>

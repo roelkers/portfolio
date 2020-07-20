@@ -4,7 +4,7 @@
   justify-content: center;
 
   &__title {
-    margin-left: 4rem
+    margin-left: 8rem;
   }
 
   &__card {
@@ -16,20 +16,22 @@
     margin: 2rem;
     transition: .2s all;
     background-color: $grey-color;
+    font-size: 1.5rem;
+
 
     &:hover {
       transform: scale(1.05);
     }
   }
 
+  &__card-title {
+    font-size: 2rem;
+  }
+
   &__img {
     background-color: $light-secondary-color;
     width: 28rem;
     height: 28rem;
-  }
-
-  &__title {
-
   }
 
   &__live {

@@ -5,6 +5,7 @@
   justify-content: center;
   align-items: center;
   flex-flow: row nowrap;
+  font-size: 2rem;
 
   &__photo {
     width: 50%;
@@ -17,6 +18,13 @@
 
   &__description {
     width: 50%;
+  }
+
+  &__link {
+    &:link, &:visited {
+      text-decoration: none;
+      color: $dark-primary-color;
+    }
   }
 
 }

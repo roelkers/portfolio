@@ -39,7 +39,12 @@
       border-top: 2px solid $dark-grey-color;
       top: .5rem;
       width: 3rem;
-
     }
+  }
+}
+
+@media(min-width: 1200px) {
+  .nav-menu {
+    display: none;
   }
 }

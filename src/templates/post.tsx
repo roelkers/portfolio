@@ -10,6 +10,7 @@ import { Navigation } from "../components/nav"
 const Post = ({ data }: any) => {
   return (
     <Layout>
+    <div className='nav-menu'><Link to='/navigation' className='nav-menu__link'><span className='nav-menu__icon'></span></Link></div>
       <SEO title="Page two" />
       <section className='section-navigation'>
         <h2>Content</h2>

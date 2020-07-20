@@ -25,7 +25,7 @@ export const Projects = () => {
           return (
             <div className='projects__card' key={node.title}>
               <img className='projects__img' />
-              <h3 className="projects__title">{node.title}&nbsp;&nbsp;
+              <h3 className="projects__card-title">{node.title}&nbsp;&nbsp;
             <a className='projects__github' href={node.github_link}><i className='devicon-github-original colored' /></a>&nbsp;&nbsp;
           {node.live_link && <a href={node.live_link} className='projects__live'>live!</a>}</h3>
               <p className="projects__description">{node.description}</p>

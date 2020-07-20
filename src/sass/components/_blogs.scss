@@ -18,25 +18,32 @@
     &:hover {
       transform: scale(1.025);
     }
+
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 2rem;
+    } 
   }
 
   &__title {
-
+    font-size: 2rem;
   }
 
   &__description {
-    
+    font-size: 2rem;
   }
 
   &__preview {
-
+    height: 2rem;
+    overflow: hidden;
   }
 
   &__more {
     position: relative;
     display: inline-block;
     width: 8em;
-
+    font-size: 1.5rem;
     @include background-link-animation; 
   }
 
@@ -49,4 +56,10 @@
     border-radius: 4px;
   }
 
+  &__img-link {
+
+    @include respond(phone) {
+      align-self: center;
+    } 
+  }
 }
