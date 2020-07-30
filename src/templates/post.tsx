@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import ReactMarkdown from 'react-markdown'
 import Image from 'gatsby-image'
 import { Navigation } from "../components/nav"
+import CodeBlock from '../components/codeBlock'
 
 const Post = ({ data }: any) => {
   return (
@@ -25,7 +26,11 @@ const Post = ({ data }: any) => {
         <section className='post__author'><Link className='post__author-link' to='/#personal'>Rufus Oelkers</Link></section>
         <Image fluid={data.strapiBlog.image.childImageSharp.fluid}  className='post__image'/>
         <section className="post__content">
-          <ReactMarkdown source={data.strapiBlog.content} />
+          <ReactMarkdown source={data.strapiBlog.content} 
+            renderers={{
+              code: CodeBlock
+            }} 
+          />
         </section>
       </main>
     </Layout>
