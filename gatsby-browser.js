@@ -4,4 +4,5 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
+import "./src/sass/index.scss"
 // You can delete this file if you're not using it

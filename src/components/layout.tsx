@@ -10,7 +10,6 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import Footer from './footer'
-import "../sass/index.scss"
 import 'typeface-source-sans-pro'
 
 const Layout = ({ children }: any) => {
